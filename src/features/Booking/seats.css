@@ -1,0 +1,16 @@
+.normal{
+    background-color: white;
+}
+.chair{
+    /* padding: 10px; */
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+}
+.vip{
+    background-color: orange;
+}
+.booked{
+    background-color: brown;
+    color: white;
+}
