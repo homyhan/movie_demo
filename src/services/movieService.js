@@ -22,5 +22,13 @@ export const movieServ = {
                 MaLichChieu: id
             }
         })
-    }
+    },
+    // getDanhSachGheDangDat(id){
+    //     const url = "/QuanLyDatVe/LayDanhSachPhongVe";
+    //     return https.get(url, {
+    //         params:{
+    //             maGhe: id
+    //         }
+    //     })
+    // }
 }

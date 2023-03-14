@@ -1,3 +1,4 @@
+import { type } from "@testing-library/user-event/dist/type";
 import axios from "axios";
 import { https } from "../../services/config";
 import { movieServ } from "../../services/movieService";
@@ -55,6 +56,21 @@ export function fetchScheduleDetail(id){
         payload: res.data.content
       })
     } catch (error) {
+      console.log(error);
+    }
+  }
+}
+
+export function fetchDanhSachGheDangDat(id){
+  return async (dispatch)=>{
+    try{
+      const res = await movieServ.getDanhSachGheDangDat(id);
+      dispatch({
+        type: "DAT_VE",
+        payload: res.data.content
+      })
+
+    }catch (error){
       console.log(error);
     }
   }
