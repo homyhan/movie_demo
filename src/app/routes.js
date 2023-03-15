@@ -1,5 +1,5 @@
 import Signin from "../features/Auth/Signin";
-import Singup from "../features/Auth/Singup";
+import Signup from "../features/Auth/Signup";
 import Detail from "../features/Booking/Detail";
 import Home from "../features/Booking/Home";
 import Seats from "../features/Booking/Seats";
@@ -20,7 +20,7 @@ export const routes =[
     {path:"/detail", component: Detail},
     {path:"/seats/:id", component: Seats},
     {path:"/signin", component: Signin},
-    {path:"/signup", component: Singup},
+    {path:"/signup", component: Signup},
     {path:"/admin", component: HomeAdmin},
     {path:"/admin/film", component: HomeAdmin},
     {path:"/admin/film/:page", component: HomeAdmin},

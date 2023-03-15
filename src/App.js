@@ -11,13 +11,13 @@ import { createBrowserHistory } from "history";
 import Header from "./components/Header";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { fetchProfile } from "./features/Auth/thunk";
+import { fetchProfile, signup } from "./features/Auth/thunk";
 import HomeScurity from "./features/Admin/HomeScurity";
 import HomeAdmin from "./features/Admin/HomeAdmin";
 import Film from "./features/Admin/components/Film";
 import User from "./features/Admin/components/User";
 import Signin from "./features/Auth/Signin";
-import Singup from "./features/Auth/Singup";
+import Signup from "./features/Auth/Signup";
 import Home from "./features/Booking/Home";
 import RouteComponent from "./HOCs/RouteComponent";
 import AddNew from "./features/Admin/components/AddNew";
@@ -171,6 +171,7 @@ function App() {
           }
         />
         <Route path="/signin" element={<RouteComponent isAuth={true} Component={Signin} redirectPath="/"/>} />
+        <Route path="/singup" element={<RouteComponent isAuth={true} Component={Signup} redirectPath="/"/>} />
         
       </Routes>
     </BrowserRouter>
