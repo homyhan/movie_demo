@@ -19,6 +19,7 @@ export const bookingReducer = (state = initialState, { type, payload }) => {
       console.log(payload);
     }
     if (type === "DAT_VE") {
+      // từ 23 đến 35 là đoạn click vào ghế thì nó add ghế đó vào chỗ tính tiền, xem bài 54 xây dựng trang đặt vé p4 của a khải
       // // let danhSachGheCapNhat = [...draft.danhSachGheDangDat];
 
       // // let index = danhSachGheCapNhat.findIndex(gheDD => gheDD.maGhe === payload.gheDuocChon.maGhe);

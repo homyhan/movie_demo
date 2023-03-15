@@ -42,12 +42,15 @@ const Seats = () => {
         {selectedScheduleDetail?.danhSachGhe?.map((item, index) => {
           let gheVip = item.loaiGhe === "Vip" ? "vip" : "";
           let gheDaDat = item.daDat === true ? "booked" : "";
+          // 46 đến 51 là đoạn click vào ghế thì nó add ghế đó vào chỗ tính tiền, xem bài 54 xây dựng trang đặt vé p4 của a khải
           // let classGheDangDat = '';
           // kiểm tra từng ghế render xem có trong mảng ghế đang đặt hay không
           // let indexGheDD = danhSachGheDangDat.findIndex(gheDD => gheDD.maGhe === item.maGhe);
           // if(indexGheDD != -1) {
           //   classGheDangDat = "gheDangDat";
           // }
+
+          // thêm ${classGheDangDat} vào sau ${gheDaDat} dòng 67, xem bài 54 xây dựng trang đặt vé p4 của a khải
 
 
           return (
@@ -72,7 +75,11 @@ const Seats = () => {
         })}
       </div>
       <div className="col-span-2 mx-auto">
-        <h3 className="text-green-400 text-center text-4xl">0 đ</h3>
+        <h3 className="text-green-400 text-center text-4xl">
+        {/* {danhSachGheDangDat.reduce((tongTien,item,index)=>{
+                return tongTien += item.giaVe;
+              },0).toLocaleString()} đ */}
+              </h3>
         <img
           className="mt-2"
           style={{ height: "450px", width: "340px" }}
@@ -90,9 +97,18 @@ const Seats = () => {
         <div className="flex flex-row my-5">
           <div className="w-4/5">
             <span className="text-red-400 text-lg">Ghế</span>
+            {/* 97 đến 99 là đoạn click vào ghế thì nó add ghế đó vào chỗ tính tiền, xem bài 54 xây dựng trang đặt vé p4 của a khải   ***cần import lodash trước danhSachGheDangDat bên dưới => 
+            _.sortBy(danhSachGheDangDat,[stt]) */}
+            {/* {danhSachGheDangDat.map((gheDD,index)=> {
+              return <span key={index} className="text-green-500 text-xl"> {gheDD.stt}</span>
+            })} */}
           </div>
           <div className="text-right col-span-1">
-            <span className="text-green-800 text-lg">0đ</span>
+            <span className="text-green-800 text-lg">
+              {/* {danhSachGheDangDat.reduce((tongTien,item,index)=>{
+                return tongTien += item.giaVe;
+              },0).toLocaleString()} */}
+            </span>
           </div>
         </div>
 
