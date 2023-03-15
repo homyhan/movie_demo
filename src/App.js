@@ -171,7 +171,7 @@ function App() {
           }
         />
         <Route path="/signin" element={<RouteComponent isAuth={true} Component={Signin} redirectPath="/"/>} />
-        <Route path="/singup" element={<RouteComponent isAuth={true} Component={Signup} redirectPath="/"/>} />
+        <Route path="/signup" element={<RouteComponent isAuth={true} Component={Signup} redirectPath="/"/>} />
         
       </Routes>
     </BrowserRouter>
